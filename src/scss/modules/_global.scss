@@ -1,0 +1,63 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @include font-archivo;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100%;
+    color: $gray-500;
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    background: $light_blue-80;
+    color: $white;
+}
+
+::selection {
+    background: $light_blue-80;
+    color: $white;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+        @include media-breakpoint-down(sm) {
+            font-size: rem(14px);
+        }
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+        @include media-breakpoint-down(sm) {
+            font-size: rem(14px);
+        }
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+        @include media-breakpoint-down(sm) {
+            font-size: rem(14px);
+        }
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+        @include media-breakpoint-down(sm) {
+            font-size: rem(14px);
+        }
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}

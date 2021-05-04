@@ -1,0 +1,46 @@
+.example-lightbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .arrow {
+        z-index: 99999;
+        position: absolute;
+        background-color: $gray-100;
+        &:hover {
+            box-shadow: none;
+            ;
+        }
+
+        &--prev {
+            top: calc(50%  - 23px);
+            left: rem(24px);
+        }
+
+        &--next {
+            top: calc(50%  - 23px);
+            right: rem(24px);
+        }
+    }
+
+    .gclose {
+        position: absolute;
+        z-index: 99999;
+    }
+
+    .gcontainer {
+        max-width: rem(621px);
+        max-height: rem(536px);
+    }
+
+    .gslider {}
+
+    .gslide {
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+    }
+    .goverlay {
+        background: rgba(7, 59, 78, 0.8);
+    }
+}

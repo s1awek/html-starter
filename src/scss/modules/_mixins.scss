@@ -1,0 +1,46 @@
+@mixin font-archivo {
+    font-family: 'Archivo', sans-serif;
+}
+
+// Function for converting a px based font-size to rem.
+// Usage: margin-bottom: rem(28px);
+@function rem($size) {
+    @return ($size / 16px) * 1rem;
+}
+
+@function str-replace($string, $search, $replace: "") {
+    $index: str-index($string, $search);
+
+    @if ($index) {
+        @return str-slice($string, 1, $index - 1)+$replace+str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+
+//Add SVG background for element
+//Usage: background-image: svg-bg('SVG CODE HERE');
+@function svg-bg($svg, $fill: null) {
+    $svg: if($fill, str-replace($svg, "<svg", "<svg fill='#{$fill}'"), $svg);
+    $svg: str-replace($svg, "<svg", "<svg xmlns='http://www.w3.org/2000/svg' ");
+    $svg: str-replace($svg, "<", "%3C");
+    $svg: str-replace($svg, ">", "%3E");
+    $svg: str-replace($svg, "\"", "'");
+    $svg: str-replace($svg, "#", "%23");
+    $svg: str-replace($svg, "&", "%26");
+
+    @return url("data:image/svg+xml,#{$svg}");
+}
+
+
+//Add icon as background
+//Usage @include bg-icon(rem(9px), rem(15px));
+@mixin bg-icon($width: rem(20px), $height: rem(20px)) {
+    display: inline-block;
+    width: $width;
+    height: $height;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    transition: $transition;
+}

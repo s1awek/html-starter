@@ -1,0 +1,43 @@
+{
+  "name": "gulp-bootstrap-frondend-boilerplate",
+  "version": "1.0.0",
+  "description": "Simple front-end boilerplate using Gulp 4 and Bootstrap 5",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "gulp",
+    "boilerplate",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "https://wellmade.online",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "autoprefixer": "^9.7.6",
+    "cssnano": "^4.1.11",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "js-datepicker": "^5.18.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.0-beta3",
+    "browser-sync": "^2.26.14",
+    "browserify": "^17.0.0",
+    "glightbox": "^3.0.7",
+    "gulp-file-include": "^2.3.0",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}
