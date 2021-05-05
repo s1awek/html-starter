@@ -1,4 +1,4 @@
-# (https://github.com/s1awek/html-starter)[HTML starter boilerplate]
+# HTML starter boilerplate
 HTML + HTML Include + GULP 4 + Bootstrap 5 + Browsersync - starter boilerplate 
 
 This is a simple starter for frontend projects. 
